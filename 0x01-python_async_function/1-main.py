@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-concat = __import__('1-concat').concat
+'''
+Test file for printing the correct output of the wait_n coroutine
+'''
+import asyncio
 
-str1 = "egg"
-str2 = "shell"
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
-print(concat(str1, str2) == "{}{}".format(str1, str2))
-print(concat.__annotations__)
+print(asyncio.run(wait_n(5, 5)))
+print(asyncio.run(wait_n(10, 7)))
+print(asyncio.run(wait_n(10, 0)))

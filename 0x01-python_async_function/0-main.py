@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-add = __import__('0-add').add
 
-print(add(1.11, 2.22) == 1.11 + 2.22)
-print(add.__annotations__)
+import asyncio
+
+wait_random = __import__('0-basic_async_syntax').wait_random
+
+print(asyncio.run(wait_random()))
+print(asyncio.run(wait_random(5)))
+print(asyncio.run(wait_random(15)))
+
