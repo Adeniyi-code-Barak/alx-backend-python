@@ -33,4 +33,5 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
         coro = await task
         num_list.append(coro)
 
-    return num_list
+    return num_lit
+
